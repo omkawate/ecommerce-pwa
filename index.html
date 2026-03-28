@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop India PWA</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6c63ff">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Shop India</h1>
+<div class="product">
+<h3>Shoes</h3>
+<p>₹2499</p>
+</div>
+<script>
+if ('serviceWorker' in navigator) {
+navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+</body>
+</html>
