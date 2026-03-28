@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop India</title>
+
+    <!-- PWA META -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6C63FF">
+
+    <!-- MOBILE VIEW -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f5f6fa;
+            text-align: center;
+        }
+
+        header {
+            background: #6C63FF;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+        }
+
+        .product {
+            background: white;
+            margin: 15px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        button {
+            background: #6C63FF;
+            color: white;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>Shop India</header>
+
+<div class="product">
+    <h3>Running Shoes</h3>
+    <p>₹2499</p>
+    <button>Add to Cart</button>
+</div>
+
+<div class="product">
+    <h3>Smart Watch</h3>
+    <p>₹3999</p>
+    <button>Add to Cart</button>
+</div>
+
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+
+</body>
+</html>
