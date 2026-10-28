@@ -15,7 +15,10 @@ sys.path.append(str(Path(__file__).parent.parent))
 from predict import SatellitePredictor
 
 
-class SatelliteGUI:
+from gui.confusion_tools import ConfusionTools
+
+
+class SatelliteGUI(ConfusionTools):
     """Main GUI application for satellite image classification."""
     
     def __init__(self, root, config_path="config.json"):
@@ -32,6 +35,7 @@ class SatelliteGUI:
         self.setup_window()
         self.setup_styles()
         self.create_widgets()
+        self.install_confusion_tools()
         self.load_model_async()
     
     def setup_window(self):
@@ -249,6 +253,7 @@ class SatelliteGUI:
             self.load_image(path)
     
     def load_image(self, path):
+        self.cm_single = []
         """Load and display image."""
         try:
             self.current_image_path = path
@@ -307,6 +312,7 @@ class SatelliteGUI:
     
     def display_results(self, result):
         """Display prediction results."""
+        self.cm_single = [dict(result)]
         self.record_result(result)
         self.result_class.config(text=f"Predicted Class: {result['predicted_class']}")
         self.result_confidence.config(text=f"Confidence: {result['confidence']:.2f}%")
@@ -586,6 +592,7 @@ class SatelliteGUI:
         win.title('Side-by-Side Satellite Image Comparison')
         win.geometry('850x480')
         win.photos = []
+        self.cm_comparison = []
         for path in paths:
             col = ttk.Frame(win, padding=12)
             col.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
@@ -598,8 +605,10 @@ class SatelliteGUI:
             ttk.Label(col, text=Path(path).name).pack()
             try:
                 result = self.predictor.predict_single(path)
+                self.cm_comparison.append({"path": path, "predicted_class": result["predicted_class"]})
                 ttk.Label(col, text=f"{result['predicted_class']} ({result['confidence']:.2f}%)").pack()
             except Exception as exc:
+                self.cm_comparison.append({'path': path, 'error': str(exc)})
                 ttk.Label(col, text=f'Error: {exc}').pack()
 
     def image_info(self):
