@@ -1,6 +1,14 @@
 # TerraScope spatial workspace
 
-Use Python 3.11 or 3.12. From this project folder:
+Use Python 3.11 or 3.12. Create a dedicated environment to avoid conflicts with existing packages. On Windows Command Prompt, from this project folder:
+
+```bat
+py -3.11 -m venv .venv
+.venv\Scripts\python -m pip install -r requirements-spatial.txt
+.venv\Scripts\python -m streamlit run spatial_app.py
+```
+
+For macOS/Linux:
 
 ```sh
 python -m venv .venv

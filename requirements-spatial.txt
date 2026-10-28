@@ -1,10 +1,10 @@
-# Validated browser UI and inference runtime (Python 3.12)
+# Compatible with Python 3.11 and 3.12; use a dedicated virtual environment.
 tensorflow==2.21.0
 streamlit==1.66.1
-numpy==2.5.4
-pandas==3.1.0
-pillow==13.0.0
-opencv-python-headless==5.0.0.93
-scikit-learn==1.9.1
+numpy==2.2.6
+pandas==2.3.3
+pillow==11.3.0
+opencv-python-headless==4.12.0.88
+scikit-learn==1.7.2
 tqdm==4.70.1
 requests==2.34.2
