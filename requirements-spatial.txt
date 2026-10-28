@@ -1,0 +1,10 @@
+# Validated browser UI and inference runtime (Python 3.12)
+tensorflow==2.21.0
+streamlit==1.66.1
+numpy==2.5.4
+pandas==3.1.0
+pillow==13.0.0
+opencv-python-headless==5.0.0.93
+scikit-learn==1.9.1
+tqdm==4.70.1
+requests==2.34.2

@@ -1,0 +1,9 @@
+{
+  "models/satellite_cnn_model.h5": "250776514f44389ca9b90fae29773738ebac13258c8668dd4a62e8ddd917feda",
+  "models/model_architecture.json": "5c1e1834d16fc29d1ac6cdadc1c08f833f2e725d461c0bcdc2e0b8e96ac41f24",
+  "config.json": "0245f9e520c09a119fa4aacbeb747de540403c0290eae177b0c9cd367a790b65",
+  "src/model.py": "f976dcde88e127bdd40fd0ee27d11d3090b49f13d7f589660933181903769603",
+  "src/train.py": "6361f1e5e011a630ce6d7f661bca844b1a4911a7ad7b01ff2eb9dd5aa8c58188",
+  "src/predict.py": "986ceb81e874f386ea13f8b312eb29555a55322ee2e9f2b326950bee2551bac2",
+  "src/data_loader.py": "133b0776b0911e05b7daafed2e8095d03c91c9942d671d0eb17077f6486cf2b8"
+}

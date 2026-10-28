@@ -1,0 +1,63 @@
+{
+    "dataset": {
+        "name": "EuroSAT",
+        "url": "https://madm.dfki.de/files/sentinel/EuroSAT.zip",
+        "num_classes": 10,
+        "class_names": [
+            "AnnualCrop",
+            "Forest",
+            "HerbaceousVegetation",
+            "Highway",
+            "Industrial",
+            "Pasture",
+            "PermanentCrop",
+            "Residential",
+            "River",
+            "SeaLake"
+        ],
+        "image_size": [
+            64,
+            64
+        ],
+        "channels": 3,
+        "use_synthetic": false
+    },
+    "model": {
+        "input_shape": [
+            64,
+            64,
+            3
+        ],
+        "num_classes": 10,
+        "learning_rate": 0.0005,
+        "batch_size": 32,
+        "epochs": 80,
+        "validation_split": 0.2,
+        "test_split": 0.1
+    },
+    "training": {
+        "use_data_augmentation": true,
+        "early_stopping_patience": 15,
+        "reduce_lr_patience": 7,
+        "reduce_lr_factor": 0.5,
+        "min_lr": 1e-06
+    },
+    "paths": {
+        "data_dir": "data/EuroSAT",
+        "model_save_path": "models/satellite_cnn_model.h5",
+        "model_json_path": "models/model_architecture.json",
+        "plots_dir": "outputs/plots",
+        "predictions_dir": "outputs/predictions"
+    },
+    "gui": {
+        "window_title": "Satellite Image Classification System",
+        "window_size": "800x600",
+        "supported_formats": [
+            ".jpg",
+            ".jpeg",
+            ".png",
+            ".tif",
+            ".tiff"
+        ]
+    }
+}

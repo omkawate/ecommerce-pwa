@@ -1,0 +1,79 @@
+CLASSIFICATION REPORT
+============================================================
+
+AnnualCrop:
+  Precision: 0.9607
+  Recall:    0.5700
+  F1-Score:  0.7155
+  Support:   300
+
+Forest:
+  Precision: 0.4451
+  Recall:    1.0000
+  F1-Score:  0.6160
+  Support:   300
+
+HerbaceousVegetation:
+  Precision: 0.4648
+  Recall:    0.9033
+  F1-Score:  0.6138
+  Support:   300
+
+Highway:
+  Precision: 0.9438
+  Recall:    0.6720
+  F1-Score:  0.7850
+  Support:   250
+
+Industrial:
+  Precision: 0.9429
+  Recall:    0.3960
+  F1-Score:  0.5577
+  Support:   250
+
+Pasture:
+  Precision: 0.8750
+  Recall:    0.2800
+  F1-Score:  0.4242
+  Support:   200
+
+PermanentCrop:
+  Precision: 0.7733
+  Recall:    0.4640
+  F1-Score:  0.5800
+  Support:   250
+
+Residential:
+  Precision: 0.5863
+  Recall:    0.9967
+  F1-Score:  0.7383
+  Support:   300
+
+River:
+  Precision: 0.9750
+  Recall:    0.6240
+  F1-Score:  0.7610
+  Support:   250
+
+SeaLake:
+  Precision: 0.9184
+  Recall:    0.3000
+  F1-Score:  0.4523
+  Support:   300
+
+
+AVERAGES:
+------------------------------
+macro avg:
+  Precision: 0.7885
+  Recall:    0.6206
+  F1-Score:  0.6244
+  Support:   2700
+
+weighted avg:
+  Precision: 0.7764
+  Recall:    0.6393
+  F1-Score:  0.6283
+  Support:   2700
+
+Overall Accuracy: 0.6393

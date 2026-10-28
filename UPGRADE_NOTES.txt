@@ -1,0 +1,7 @@
+UPGRADE: 15 requested features
+Dashboard, confidence bars, image preview, duplicate-free batch progress, PDF, charts, confidence warnings, optional drag/drop, zoom, theme, prediction history, Excel, two-image comparison, land-cover category information (predicted class + image metadata), processing time.
+
+Run: pip install -r requirements.txt ; python main.py
+Optional drag-and-drop requires tkinterdnd2. Model weights, training code, config, and preprocessing are unchanged.
+Charts show predicted classes, not measured accuracy. Comparison is side-by-side classification, not pixel-level change detection.
+GUI runtime has not been tested in this headless environment.
